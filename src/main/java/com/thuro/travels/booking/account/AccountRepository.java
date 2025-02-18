@@ -11,8 +11,12 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
 
     // Add custom queries here if needed (see examples below)
 
-    // Example: Find accounts by last name
+    //Find accounts by last name
     List<Account> findByLastName(String lastName);
+
+    Account findByAccountId(Long id);
+
+    List<Account> getAllAccounts();
 
     // Example: Find accounts by email address
     Account findByMailAddress(String mailAddress);
